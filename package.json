@@ -1,0 +1,20 @@
+{
+  "name": "example-bower-resolver",
+  "version": "0.0.1-beta",
+  "description": "sample implementation of a bower pluggable resolver",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "node ./node_modules/mocha/bin/mocha",
+    "coverage": "node ./node_modules/istanbul/lib/cli.js cover _mocha --"
+  },
+  "keywords": [
+    "bower-resolver",
+    "example"
+  ],
+  "author": "Evan Bowling",
+  "license": "MIT",
+  "devDependencies": {
+    "istanbul": "^0.4.2",
+    "mocha": "^2.4.5"
+  }
+}
