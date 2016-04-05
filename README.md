@@ -1,5 +1,7 @@
 # example-bower-resolver
 Sample implementation of a bower pluggable resolver.
+[![Dependencies](https://david-dm.org/evanjbowling/example-bower-resolver.svg)](https://david-dm.org/evanjbowling/example-bower-resolver)
+
 
 ## Features
 Simple resolver designed to illustrate best practices. This resolver contains
@@ -13,6 +15,3 @@ First, install this package globally with [npm]():
     npm install -g example-bower-resolver
 
 Second, configure the `.bowerrc` file to use this resolver:
-
-## Usage
-Install
