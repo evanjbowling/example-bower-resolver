@@ -1,6 +1,7 @@
 # example-bower-resolver
 Sample implementation of a bower pluggable resolver.
-[![Dependencies](https://david-dm.org/evanjbowling/example-bower-resolver.svg)](https://david-dm.org/evanjbowling/example-bower-resolver)
+
+[![Dependencies](https://david-dm.org/evanjbowling/example-bower-resolver.svg)](https://david-dm.org/evanjbowling/example-bower-resolver) [![Dev Dependencies](https://img.shields.io/david/dev/evanjbowling/example-bower-resolver.svg)](https://img.shields.io/david/dev/evanjbowling/example-bower-resolver)
 
 
 ## Features
