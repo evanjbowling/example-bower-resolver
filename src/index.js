@@ -1,52 +1,35 @@
 var fs = require('fs');
 var os = require('os');
+var path = require('path');
 
-/**
- * Factory function for resolver
- * It is called only one time by Bower, to instantiate resolver.
- * You can instantiate here any caches or create helper functions.
- */
 module.exports = function resolver(bower) {
 
-  // Resolver factory returns an instance of resolver
   return {
-
-    // Match method tells whether resolver supports given source
-    // It can return either boolean or promise of boolean
+    // determine whether this resolver can handle a particular "source"
+    // i.e. a `bower install source` will first run this match method
     match: function (source) {
-      return source.indexOf('example://') === 0;
-    },
-/*
-    // Optional:
-    // Can resolve or normalize sources, like:
-    // "jquery" => "git://github.com/jquery/jquery.git"
-    locate: function (source) {
-      return source;
+      return source.indexOf('example://apple') === 0 ||
+        source.indexOf('ex://apple') === 0;
     },
 
-    // Optional:
-    // Allows to list available versions of given source.
-    // Bower chooses matching release and passes it to "fetch"
-    releases: function (source) {
-      return [
-        { target: 'v1.0.0', version: '1.0.0' }
-      ];
-    },*/
-
-    // It downloads package and extracts it to temporary directory
-    // You can use npm's "tmp" package to tmp directories
-    // See the "Resolver API" section for details on this method
+    // download the bower component files
     fetch: function (endpoint, cached) {
-      // If cached version of package exists, re-use it
-      if (cached && cached.version) {
-        return;
+
+      // 1. create a temporary directory
+      var tempDir = os.tmpdir()+path.sep+'example-bower-resolver-'+new Date().getTime();
+      bower.logger.info('example-bower-resolver','creatd temp dir: '+tempDir);
+      fs.mkdirSync(tempDir);
+
+      // 2. populate temporary directory with component files
+      if(endpoint.name === 'apple') {
+        bower.logger.info('example-bower-resolver','creatd temp dir: '+tempDir);
+        fs.writeFileSync(tempDir+path.sep+'apple.js', "console.log('log from apple.js');");
+        fs.writeFileSync(tempDir+path.sep+'bower.json','{"name": "apple","description": "example bower component","main": "apple.js"}');
       }
 
-      var path=fs.mkdtempSync(os.tempDir());
-      // ... download package to tempDir
-
+      // 3. return expected interface
       return {
-        tempPath: path,
+        tempPath: tempDir,
         removeIgnores: true
       };
     }
