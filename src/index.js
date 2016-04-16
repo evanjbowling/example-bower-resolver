@@ -15,14 +15,16 @@ module.exports = function resolver(bower) {
     // download the bower component files
     fetch: function (endpoint, cached) {
 
+      // 0. log inputs for clarity
+      bower.logger.info('example-bower-resolver','endpoint: '+JSON.stringify(endpoint));
+
       // 1. create a temporary directory
       var tempDir = os.tmpdir()+path.sep+'example-bower-resolver-'+new Date().getTime();
-      bower.logger.info('example-bower-resolver','creatd temp dir: '+tempDir);
+      bower.logger.info('example-bower-resolver','created temp dir: '+tempDir);
       fs.mkdirSync(tempDir);
 
       // 2. populate temporary directory with component files
       if(endpoint.name === 'apple') {
-        bower.logger.info('example-bower-resolver','creatd temp dir: '+tempDir);
         fs.writeFileSync(tempDir+path.sep+'apple.js', "console.log('log from apple.js');");
         fs.writeFileSync(tempDir+path.sep+'bower.json','{"name": "apple","description": "example bower component","main": "apple.js"}');
       }
@@ -34,4 +36,4 @@ module.exports = function resolver(bower) {
       };
     }
   };
-}
+};
