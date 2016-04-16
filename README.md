@@ -12,7 +12,7 @@ the following two commands:
   * `bower install ex://apple`
 
 ## Purpose
-Ok, so the example "apple" component isn't that interesting.. This effort is meant
+Ok, so the example "apple" component isn't that interesting. This effort is meant
 to create a concise implementation of the bower [Pluggable Resolver](http://bower.io/docs/pluggable-resolvers/)
  architecture.
 
@@ -35,3 +35,13 @@ Second, configure the `.bowerrc` file to use this resolver:
 Exercise the resolver with:
 
     bower install ex://apple
+
+## Development
+Run the mocha tests with:
+
+	npm test
+
+Run the istanbul coverage analysis with:
+
+	npm run coverage
+
