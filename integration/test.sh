@@ -31,4 +31,4 @@ echo "{ \"resolvers\": [
 " > .bowerrc
 
 # run bower install test
-bower install example://apples
+bower install example://apple
