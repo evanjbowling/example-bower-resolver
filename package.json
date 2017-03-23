@@ -6,8 +6,8 @@
   "scripts": {
     "test": "node ./node_modules/mocha/bin/mocha",
     "coveralls": "npm run coverage && cat coverage/coverage.lcov | ./node_modules/coveralls/bin/coveralls.js",
-    "coverage-prep": "rm -rf coverage && mkdir coverage && npm run instrument-prep",
-    "coverage": "npm run coverage-prep && node ./node_modules/.bin/mocha -R mocha-lcov-reporter > coverage/coverage.lcov && npm run coverage-cleanup",
+    "coverage-prep": "mkdir coverage && npm run instrument-prep",
+    "coverage": "npm run coverage-prep && node ./node_modules/.bin/mocha -R mocha-lcov-reporter | sed 's|SF:|SF:src/|' > coverage/coverage.lcov && npm run coverage-cleanup",
     "coverage-cleanup": "npm run instrument-cleanup",
     "instrument-prep": "node node_modules/.bin/jscover src src-cov && mv src src-orig && mv src-cov src",
     "instrument-cleanup": "rm -rf src && mv src-orig src"
