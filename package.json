@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "test": "node ./node_modules/mocha/bin/mocha",
-    "coveralls": "npm run coverage && cat coverage/coverage.lcov | ./node_modules/.bin/coveralls",
+    "coveralls": "npm run coverage && cat coverage/coverage.lcov | /node_modules/coveralls/bin/coveralls.js",
     "coverage-prep": "rm -rf coverage && mkdir coverage && npm run instrument-prep",
     "coverage": "npm run coverage-prep && node ./node_modules/.bin/mocha -R mocha-lcov-reporter > coverage/coverage.lcov && npm run coverage-cleanup",
     "coverage-cleanup": "npm run instrument-cleanup",
