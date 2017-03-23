@@ -1,7 +1,7 @@
 # example-bower-resolver
 Sample implementation of a bower pluggable resolver.
 
-[![Build Status](https://travis-ci.org/evanjbowling/example-bower-resolver.svg?branch=master)](https://travis-ci.org/evanjbowling/example-bower-resolver) [![Coverage Status](https://coveralls.io/repos/github/evanjbowling/example-bower-resolver/badge.svg?branch=master)](https://coveralls.io/github/evanjbowling/example-bower-resolver?branch=master) [![Dependencies](https://david-dm.org/evanjbowling/example-bower-resolver.svg)](https://david-dm.org/evanjbowling/example-bower-resolver) [![Dev Dependencies](https://img.shields.io/david/dev/evanjbowling/example-bower-resolver.svg)](https://img.shields.io/david/dev/evanjbowling/example-bower-resolver)
+[![Build Status](https://travis-ci.org/evanjbowling/example-bower-resolver.svg?branch=master)](https://travis-ci.org/evanjbowling/example-bower-resolver) [![Coverage Status](https://coveralls.io/repos/github/evanjbowling/example-bower-resolver/badge.svg?branch=master)](https://coveralls.io/github/evanjbowling/example-bower-resolver?branch=master) [![Dependencies](https://david-dm.org/evanjbowling/example-bower-resolver.svg)](https://david-dm.org/evanjbowling/example-bower-resolver) [![Dev Dependencies](https://img.shields.io/david/dev/evanjbowling/example-bower-resolver.svg)](https://img.shields.io/david/dev/evanjbowling/example-bower-resolver) [![Downloads](https://img.shields.io/npm/dt/example-bower-resolver.svg)]
 
 
 ## Features

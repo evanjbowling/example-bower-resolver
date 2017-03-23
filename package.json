@@ -14,14 +14,14 @@
   "author": "Evan Bowling",
   "license": "MIT",
   "devDependencies": {
-    "istanbul": "^0.4.2",
-    "mocha": "^2.4.5",
-    "mock-require": "^1.2.1"
+    "istanbul": "^0.4.5",
+    "mocha": "^3.2.0",
+    "mock-require": "^2.0.1"
   },
   "bugs": "https://github.com/evanjbowling/example-bower-resolver/issues",
-  "repository" :{
-    "type" : "git",
-    "url" : "https://github.com/evanjbowling/example-bower-resolver"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/evanjbowling/example-bower-resolver"
   },
   "files": [
     "src/",
