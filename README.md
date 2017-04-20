@@ -40,7 +40,8 @@ Run the mocha tests with:
 
 	npm test
 
-Run the istanbul coverage analysis with:
+Run the coverage analysis with coveralls:
 
-	npm run coverage
+    npm run coverage
+    npm run coverage-cleanup
 
